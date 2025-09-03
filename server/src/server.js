@@ -1,10 +1,8 @@
 import express from "express";
+import notesRoute from "./routes/notesRoute.js";
 
 const app = express();
-
-app.get("/api/notes", (req, res) => {
-  res.send("you got 5 notes");
-});
+app.use("/api/notes", notesRoute);
 
 app.listen(5001, () => {
   console.log("server running");
