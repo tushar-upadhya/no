@@ -8,7 +8,7 @@ const { Ratelimit } = rateLimitModule;
 
 const ratelimit = new Ratelimit({
   redis: Redis.fromEnv(),
-  limiter: Ratelimit.slidingWindow(10, "60 s"), // 60 requests per minute
+  limiter: Ratelimit.slidingWindow(10, "20 s"), // 60 requests per minute
 });
 
 export default ratelimit;
